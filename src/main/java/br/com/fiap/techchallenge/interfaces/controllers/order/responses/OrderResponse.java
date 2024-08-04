@@ -12,7 +12,9 @@ public record OrderResponse(String id,
                             CustomerResponse customer,
                             List<OrderItemResponse> items,
                             LocalDate created,
-                            Double amount) {
+                            Double amount,
+                            String deliveryStatus,
+                            String paymentStatus) {
 
     @Builder
     public record OrderItemResponse(String product,

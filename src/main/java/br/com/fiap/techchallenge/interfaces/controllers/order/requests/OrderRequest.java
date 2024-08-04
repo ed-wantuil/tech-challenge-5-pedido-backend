@@ -11,7 +11,9 @@ public record OrderRequest(String id,
                            CustomerRequest customer,
                            List<OrderItemRequest> items,
                            LocalDate created,
-                           Double amount) {
+                           Double amount,
+                           String deliveryStatus,
+                           String paymentStatus) {
 
     @Builder
     public record OrderItemRequest(String product,

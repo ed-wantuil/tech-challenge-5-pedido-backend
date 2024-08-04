@@ -10,7 +10,7 @@ public class OrderItemEntityToOrderItem {
     public OrderItem convert(final OrderItemEntity orderItemEntity) {
         return OrderItem
                 .builder()
-                .product(orderItemEntity.getProduct().toString())
+                .product(String.valueOf(orderItemEntity.getProduct()))
                 .quantity(orderItemEntity.getQuantity())
                 .price(orderItemEntity.getPrice())
                 .build();

@@ -17,5 +17,4 @@ public interface CreateCustomerWeb {
             })
     @PostMapping("/customer")
     CustomerResponse create(@RequestBody CustomerRequest customerRequest);
-
 }

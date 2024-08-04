@@ -24,4 +24,6 @@ public class Order {
     private List<OrderItem> items;
     private LocalDate created;
     private OrderAmount amount;
+    private String deliveryStatus;
+    private String paymentStatus;
 }

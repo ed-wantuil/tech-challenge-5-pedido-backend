@@ -21,9 +21,11 @@ public class OrderEntityToOrder {
                 .builder()
                 .id(orderEntity.getId().toString())
                 .customer(Objects.nonNull(orderEntity.getCustomer()) ? customerEntityToCustomer.convert(orderEntity.getCustomer()) : null)
-                .items(orderEntity.getItems().stream().map(orderItemEntityToOrderItem::convert).toList())
+                .items(orderEntity.getItems() != null ? orderEntity.getItems().stream().map(orderItemEntityToOrderItem::convert).toList() : null)
                 .created(orderEntity.getCreated())
                 .amount(new OrderAmount(orderEntity.getAmount()))
+                .deliveryStatus(orderEntity.getDeliveryStatus())
+                .paymentStatus(orderEntity.getPaymentStatus())
                 .build();
     }
 }

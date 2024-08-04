@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import br.com.fiap.techchallenge.application.gateways.OrderGateway;
 import br.com.fiap.techchallenge.application.usecases.order.impl.OrderCheckoutImpl;
-import br.com.fiap.techchallenge.application.usecases.order.impl.RegisterPayment;
 import br.com.fiap.techchallenge.domain.entities.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

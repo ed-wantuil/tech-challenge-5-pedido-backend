@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
-import software.amazon.awssdk.auth.credentials.AwsSessionCredentials;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.sqs.SqsClient;
 
@@ -31,9 +30,6 @@ public class SQSConfig {
     @Value("${aws.secretKey}")
     private final String secretKey;
 
-    @Value("${aws.sessionToken}")
-    private final String sessionToken;
-
     @Value("${aws.sqs.endpoint}")
     private final String endpoint;
 
@@ -50,7 +46,7 @@ public class SQSConfig {
     public SqsClient sqsClient() {
         return SqsClient.builder()
                 .region(Region.of(region))
-                .credentialsProvider(() -> AwsSessionCredentials.create(accessKey, secretKey, sessionToken))
+                .credentialsProvider(() -> AwsBasicCredentials.create(accessKey, secretKey))
                 .endpointOverride(URI.create(endpoint))
                 .build();
     }

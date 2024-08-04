@@ -27,6 +27,8 @@ public class OrderToOrderEntity {
                         .toList())
                 .amount(order.getAmount().amount())
                 .created(order.getCreated())
+                .deliveryStatus(order.getDeliveryStatus())
+                .paymentStatus(order.getPaymentStatus())
                 .build();
     }
 }

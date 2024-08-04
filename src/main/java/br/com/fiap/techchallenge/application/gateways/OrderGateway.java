@@ -7,4 +7,6 @@ public interface OrderGateway {
     Order checkout(Order order);
 
     Order findById(String id);
+
+    Order save(Order order);
 }

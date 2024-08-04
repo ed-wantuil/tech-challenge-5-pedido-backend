@@ -14,4 +14,9 @@ public class OrderCheckoutWebImpl implements OrderCheckoutWeb {
     public OrderResponse create(final OrderRequest orderRequest) {
         return orderCheckoutController.create(orderRequest);
     }
+
+    @Override
+    public OrderResponse get() {
+        return null;
+    }
 }

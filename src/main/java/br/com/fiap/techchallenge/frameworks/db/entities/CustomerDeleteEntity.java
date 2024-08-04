@@ -1,15 +1,10 @@
 package br.com.fiap.techchallenge.frameworks.db.entities;
 
-import java.time.LocalDate;
-import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,24 +19,17 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class OrderEntity {
-
+public class CustomerDeleteEntity {
+    
     @Id
     @GeneratedValue
     private UUID id;
 
-    @ManyToOne
-    private CustomerEntity customer;
+    private String nome;
 
-    @OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
-    private List<OrderItemEntity> items;
+    private String endereco;
 
-    private LocalDate created;
+    private String numeroTelefone;
 
-    private Double amount;
-
-    private String deliveryStatus;
-
-    private String paymentStatus;
-
+    private String informacaoPagamento;
 }

@@ -1,4 +1,4 @@
-package br.com.fiap.techchallenge.application.usecases.order.impl;
+package br.com.fiap.techchallenge.application.usecases.order;
 
 import br.com.fiap.techchallenge.domain.entities.Order;
 

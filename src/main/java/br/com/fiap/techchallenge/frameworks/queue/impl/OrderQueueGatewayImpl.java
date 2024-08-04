@@ -22,7 +22,7 @@ public class OrderQueueGatewayImpl implements OrderQueueGateway {
 
     private final OrderToOrderQueueDTO orderToOrderQueueDTO;
 
-    @Value("${aws.sqs.queue.payment.endpoint}")
+    @Value("${aws.sqs.queue.pagamento.endpoint}")
     private final String endpoint;
 
     @Override
@@ -30,9 +30,7 @@ public class OrderQueueGatewayImpl implements OrderQueueGateway {
         final ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
-
         final OrderQueueDTO orderQueueDTO = orderToOrderQueueDTO.convert(order);
-
 
         try {
             String jsonString = objectMapper.writeValueAsString(orderQueueDTO);
@@ -48,7 +46,5 @@ public class OrderQueueGatewayImpl implements OrderQueueGateway {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }

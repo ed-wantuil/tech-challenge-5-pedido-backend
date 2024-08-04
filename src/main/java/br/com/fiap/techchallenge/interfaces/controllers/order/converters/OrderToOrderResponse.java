@@ -24,6 +24,8 @@ public class OrderToOrderResponse {
                         .build()).toList())
                 .created(order.getCreated())
                 .amount(order.getAmount().amount())
+                .paymentStatus(order.getPaymentStatus())
+                .deliveryStatus(order.getDeliveryStatus())
                 .build();
     }
 }

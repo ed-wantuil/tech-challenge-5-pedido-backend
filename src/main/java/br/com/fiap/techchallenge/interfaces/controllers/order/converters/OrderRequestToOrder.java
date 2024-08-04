@@ -28,6 +28,8 @@ public class OrderRequestToOrder {
                         .toList())
                 .created(orderRequest.created())
                 .amount(new OrderAmount(orderRequest.amount()))
+                .paymentStatus(orderRequest.paymentStatus())
+                .deliveryStatus(orderRequest.deliveryStatus())
                 .build();
     }
 }

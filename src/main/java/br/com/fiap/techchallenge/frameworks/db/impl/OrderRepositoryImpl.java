@@ -47,4 +47,13 @@ public class OrderRepositoryImpl implements OrderGateway {
 
         return orderEntityToOrder.convert(oderEntity);
     }
+
+    @Override
+    public Order save(final Order order) {
+        final var orderEntity = orderToOrderEntity.convert(order);
+
+        final var orderEntitySaved = springDataOrderRepository.save(orderEntity);
+
+        return orderEntityToOrder.convert(orderEntitySaved);
+    }
 }
