@@ -44,7 +44,7 @@ Em sistemas baseados em microserviços, onde várias transações distribuídas 
 
 Para garantir a conformidade com a LGPD, foi elaborado um Relatório de Impacto à Proteção de Dados Pessoais. Você pode acessá-lo aqui:
 
-[RELATÓRIO DE IMPACTO À PROTEÇÃO DE DADOS PESSOAIS](./lgpd/RIPD.pdf) 
+[RELATÓRIO DE IMPACTO À PROTEÇÃO DE DADOS PESSOAIS](./doc/RIPD.pdf) 
 
 
 
@@ -52,8 +52,8 @@ Para garantir a conformidade com a LGPD, foi elaborado um Relatório de Impacto 
 
 Realizamos avaliações de segurança utilizando a ferramenta OWASP ZAP. Os relatórios das avaliações estão disponíveis nos links abaixo:
 
-Antes das correções: [owasp antes](./doc/owasp_antes.html)
-Depois das correções: [owasp depois](./doc/owasp_depois.html)
+Antes das correções: [owasp antes](./doc/owasp_antes.pdf)
+Depois das correções: [owasp depois](./doc/owasp_depois.pdf)
 
 
 
