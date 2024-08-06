@@ -1,6 +1,9 @@
 package br.com.fiap.techchallenge.interfaces.controllers.customer.requests;
 
-public record CustomerRequest(String id,
+
+import jakarta.validation.constraints.Size;
+
+public record CustomerRequest(@Size(max = 50) String id,
                               String cpf,
                               String name,
                               String email) {
